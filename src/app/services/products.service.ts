@@ -10,4 +10,8 @@ export class ProductsService {
   getAll() {
     return this.http.get('https://dummyjson.com/products');
   }
+
+  getAllWithPagination(limit: number, skip: number) {
+    return this.http.get(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`)
+  }
 }

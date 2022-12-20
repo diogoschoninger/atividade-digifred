@@ -11,5 +11,12 @@
 2. Utilizei o HttpClientModule (@angular/common/http) para realizar as requisições à API;
 3. Defini a interface de tipagem dos objetos de produtos (Product);
 4. Construí um serviço, para gerenciar as requisições à API (src/app/services/products.service);
-5. Realizer a requisição à API, buscando por todos os produtos;
+5. Realizei a requisição à API, buscando por todos os produtos;
 6. Formatei a resposta, armazenando apenas um array de objetos com os produtos na váriável dataSource. Com isso, a tabela já consegue realizar a listagem dos produtos.
+
+---
+
+7. Adicionei o Paginator à tabela e, logo de cara, erro de animação. Então reinstalei o @angular/material com as animações e isso foi resolvido;
+8. Tirei o código de busca dos produtos do método ngOnInit() e o coloquei em um método dedicado dentro da classe, para poder realizar novamente as buscas quando a tabela for paginada;
+9. Criei outro método no serviço de produtos para realizar requisições com paginação (getProductsWithPagination());
+10. Adicionei o método ngAfterViewInit() para realizar as requisições novamente sempre que a tabela for paginada.
