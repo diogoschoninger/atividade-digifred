@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  padding: 0
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -11,4 +12,16 @@ body {
 body {
   padding: 1rem;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button {
+  padding: 1rem;
+  background-color: #eee;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: all ease-in 0.1s;
+}
+button:hover {
+  background-color: #ccc;
 }

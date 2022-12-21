@@ -20,3 +20,13 @@
 8. Tirei o código de busca dos produtos do método ngOnInit() e o coloquei em um método dedicado dentro da classe, para poder realizar novamente as buscas quando a tabela for paginada;
 9. Criei outro método no serviço de produtos para realizar requisições com paginação (getProductsWithPagination());
 10. Adicionei o método ngAfterViewInit() para realizar as requisições novamente sempre que a tabela for paginada.
+
+---
+
+Entre uma etapa e outra houveram muitos erros e correções. Cria componente, exclui componente e assim por diante.
+
+Até esta atividade, não tive contato com Angular, então a maior parte do tempo foi gasto lendo a documentação e assistindo vídeos para entender como esse framework funciona.
+
+Nas tentativas de criar os Dialogs de adição e edição de produtos, não consegui executar.
+
+Manti os componentes no código para análise, mesmo não conseguindo exibí-los.
