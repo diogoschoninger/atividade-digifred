@@ -1,32 +1,27 @@
-## Tecnologias utilizadas
-- Angular v15.0.4
-- Node v18.12.1
-- NPM v8.8.0
-- Typescript v4.8.4
+# AtividadeDigifred
 
----
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-## Processo de desenvolvimento
-1. Utilizei o MatTableModule (@angular/material/table), para construir a tabela;
-2. Utilizei o HttpClientModule (@angular/common/http) para realizar as requisições à API;
-3. Defini a interface de tipagem dos objetos de produtos (Product);
-4. Construí um serviço, para gerenciar as requisições à API (src/app/services/products.service);
-5. Realizei a requisição à API, buscando por todos os produtos;
-6. Formatei a resposta, armazenando apenas um array de objetos com os produtos na váriável dataSource. Com isso, a tabela já consegue realizar a listagem dos produtos.
+## Development server
 
----
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-7. Adicionei o Paginator à tabela e, logo de cara, erro de animação. Então reinstalei o @angular/material com as animações e isso foi resolvido;
-8. Tirei o código de busca dos produtos do método ngOnInit() e o coloquei em um método dedicado dentro da classe, para poder realizar novamente as buscas quando a tabela for paginada;
-9. Criei outro método no serviço de produtos para realizar requisições com paginação (getProductsWithPagination());
-10. Adicionei o método ngAfterViewInit() para realizar as requisições novamente sempre que a tabela for paginada.
+## Code scaffolding
 
----
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Entre uma etapa e outra houveram muitos erros e correções. Cria componente, exclui componente e assim por diante.
+## Build
 
-Até esta atividade, não tive contato com Angular, então a maior parte do tempo foi gasto lendo a documentação e assistindo vídeos para entender como esse framework funciona.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Nas tentativas de criar os Dialogs de adição e edição de produtos, não consegui executar.
+## Running unit tests
 
-Manti os componentes no código para análise, mesmo não conseguindo exibí-los.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
