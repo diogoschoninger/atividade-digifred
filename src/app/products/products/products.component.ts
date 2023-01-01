@@ -9,12 +9,14 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
-  products: Product[];
+  products: Product[] = [];
   displayedColumns: string[] = ['id', 'title', 'price', 'brand'];
 
   constructor(
     private productsService: ProductsService
   ) {
-    this.products = this.productsService.list()
+    this.productsService.list().subscribe((response: any) => {
+      this.products = response.products;
+    })
   }
 }
