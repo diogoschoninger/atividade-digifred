@@ -1,27 +1,16 @@
-# AtividadeDigifred
+# Atividade teste
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+Versões utilizadas:
+- Angular v15
+- rxjs v7.5
+- Typescript v4.8
 
-## Development server
+Comecei o desenvolvimento sem conhecer ao menos 1 comando do Angular, fui acompanhando a documentação e tutoriais online.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Desenvolvi alguns componentes até onde consegui e, quando o prazo inicial chegou ao fim, mal tinha conseguido construir a tabela e listar os produtos.
 
-## Code scaffolding
+Entreguei o repositório mesmo assim e continuei a estudar o framework.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Mesmo tendo realizado a entrega, decidi continuar a desenvolver e concluir a atividade. Depois de alguns dias fazendo uns cursos no youtube e lendo a documentação do Angular, acredito que alcancei os objetivos da atividade proposta.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Se ainda há tempo, gostaria de apresentar este repositório com a atividade realizada.

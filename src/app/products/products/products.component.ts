@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute, Router } from '@angular/router';
+import { PageEvent } from '@angular/material/paginator';
 import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
 
 import { Product } from '../model/product';
@@ -17,14 +17,23 @@ export class ProductsComponent {
   products: Product[] = [];
   displayedColumns = ['id', 'title', 'price', 'brand', 'actions'];
 
+  tableLength = 0;
+  tablePageSize = 10;
+  tablePageIndex = 0;
+
   constructor(
     public dialog: MatDialog,
-    private router: Router,
-    private route: ActivatedRoute
   ) {
-    fetch(API_URL)
+    this.getProducts();
+  }
+
+  getProducts() {
+    fetch(`${API_URL}?limit=${this.tablePageSize}&skip=${this.tablePageSize * this.tablePageIndex}`)
       .then(res => res.json())
-      .then(res => this.products = res.products)
+      .then(res => {
+        this.products = res.products;
+        this.tableLength = res.total;
+      })
       .catch(err => this.onError('Erro ao carregar os produtos. Recarregue a página'));
   }
 
@@ -51,5 +60,15 @@ export class ProductsComponent {
         id
       }
     })
+  }
+
+  tablePageEvent(event: PageEvent) {
+    this.products = [];
+
+    this.tableLength = event.length;
+    this.tablePageSize = event.pageSize;
+    this.tablePageIndex = event.pageIndex;
+
+    this.getProducts();
   }
 }
