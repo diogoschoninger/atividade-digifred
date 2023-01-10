@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{ data.action }} produto</h1>
+<div mat-dialog-content style="padding: 0">
+  <mat-form-field appearance="outline" style="padding: 1rem 1rem 0 1rem">
+    <mat-label>Nome do produto</mat-label>
+    <input matInput value={{data.title}}>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button *ngIf="data.action === 'Adicionar'" mat-stroked-button mat-dialog-close
+    (click)="onAddProduct(data.title)">Adicionar</button>
+  <button *ngIf="data.action === 'Editar'" mat-stroked-button mat-dialog-close
+    (click)="onEditProduct(data.id, data.title)">Editar</button>
+</div>

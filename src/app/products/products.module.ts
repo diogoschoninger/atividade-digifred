@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { MaterialModule } from '../shared/material/material.module';
 import { SharedModule } from '../shared/shared.module';
-import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductFormDialogComponent } from './product-form-dialog/product-form-dialog.component';
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
     ProductsComponent,
-    ProductFormComponent
+    ProductFormDialogComponent,
   ],
   imports: [
     CommonModule,
